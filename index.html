@@ -1,0 +1,93 @@
+<!-- 
+    » Wagner Lima | www.wagnerlima.net | @wagnerlimaNET «
+	  Professor de desenvolvimento web e design na escola iwtraining, especialista em mecanismos de 
+    buscas (SEO) e graduando em Sistemas e Mídias Digitais na Universidade Federal do Ceará (UFC).
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roleta Premiada - Comercial Maia</title>
+    <!-- início da biblioteca Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- fim da biblioteca Bootstrap CSS -->
+
+    <!-- início do CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+    <!-- fim do CSS personalizado -->
+
+    <!-- início do ícone [favicon] -->
+    <link rel="icon" type="image/x-icon" href="imagens/icone.png">
+    <!-- fim do ícone [favicon] -->
+</head>
+<body>
+    <!-- início da roleta completa -->
+    <div class="main-container">
+      <div class="wheel-container">
+        <!-- início da setinha que aponta para o prêmio -->
+        <div class="pointer"></div>
+        <!-- fim da setinha que aponta para o prêmio -->
+        
+        <!-- início da roleta -->
+        <div id="logotipo">
+          <div class="wheel" id="wheel">
+            <!-- início do botão invisível sobre o logotipo para iniciar o giro -->
+            <button id="spin-btn"></button>
+            <!-- fim do botão invisível sobre o logotipo para iniciar o giro -->
+          </div>
+        </div>
+        <!-- fim da roleta -->
+      </div>
+    </div>
+    <!-- fim da roleta completa -->
+
+    <!-- início do texto das instruções -->
+    <img src="imagens/texto-gire-a-roleta.png" class="w-25 mt-5 mb-5 distancia">
+    <!-- fim do texto das instruções -->
+
+    <!-- início do logotipo do feirão -->
+    <img src="imagens/simbolo.png" class="w-25 mt-5 mb-5 distancia">
+    <!-- fim do logotipo do feirão -->
+    
+    <!-- início da tela escurecendo ["Tente Outra Vez"] -->
+    <div class="dark-overlay" id="dark-overlay"></div>
+    <!-- fim da tela escurecendo ["Tente Outra Vez"] -->
+
+    <!-- início da animação dos confetes -->
+    <canvas id="confetti-canvas"></canvas>
+    <!-- fim da animação dos confetes -->
+
+    <!-- início do componente Modal do Bootstrap para exibir o resultado -->
+    <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="resultModalLabel">Resultado do Sorteio</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <h2 id="prize-text"></h2>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- fim do componente Modal do Bootstrap para exibir o resultado -->
+
+    <!-- início da biblioteca de confetes -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <!-- início da biblioteca de confetes -->
+
+    <!-- início da biblioteca Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- fim da biblioteca Bootstrap JS -->
+
+    <!-- início do JS personalizado -->
+    <script src="script.js"></script>
+    <!-- fim do JS personalizado -->
+</body>
+</html>
